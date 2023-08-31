@@ -1,34 +1,57 @@
-body {
+body.dark-mode {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    color: #fff;
+}
+
+body.light-mode {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    color: #333; /* Set a dark text color for light mode */
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    opacity: 0.9;
 }
 
 h1 {
     text-align: center;
-}
+    margin-top: 0;
+}   
 
 form {
-    display: flex;
-    margin-bottom: 10px;
+    width: 100%;
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 8px;
+input[type="text"], textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    background-color: #444;
+    color: #fff;
 }
 
 button {
-    padding: 8px 15px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -42,10 +65,58 @@ ul {
 }
 
 li {
-    padding: 5px;
+    padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.names {
-    font-weight: bold;
+.textbox {
+    resize: none;
 }
+
+.seperator {
+    margin-bottom: 15px;
+}
+
+.chat {
+    float: left;
+    width: 400px;
+    height: 360px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #444;
+    opacity: 0.9;
+    overflow-y: auto;
+    color: #fff;
+}
+
+/* Add media query for mobile */
+@media (max-width: 768px) {
+    .chat {
+        float: none; /* Remove float on small screens */
+        width: 100%; /* Take full width on small screens */
+        margin: 10px auto; /* Center and reduce vertical margin */
+    }
+}
+
+.toggle {
+    font-size: x-large;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #444;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
